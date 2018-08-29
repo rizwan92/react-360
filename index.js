@@ -1,33 +1,42 @@
 import React from 'react';
-import {Surface, Entity} from 'react-360-web';
 import {
   AppRegistry,
   StyleSheet,
   Text,
   View,
+  Entity,
+  asset
 } from 'react-360';
 
-export default class Hello360 extends React.Component {
-  render() {
-    return (
-      <View style={styles.panel}>
-      <Entity source={{obj: asset('./human.obj')}} />
-        <View style={styles.greetingBox}>
-          <Text style={styles.greeting}>
-            Welcome to React 360
-          </Text>
-        </View>
-      </View>
-    );
-  }
-};
 // export default class Hello360 extends React.Component {
 //   render() {
 //     return (
-//       <Entity source={{obj: asset('./human.obj')}} />
+//       <View style={styles.panel}>
+//         <View style={styles.greetingBox}>
+//           <Text style={styles.greeting}>
+//             Welcome to React 360
+//           </Text>
+//           <Entity
+//             source={{
+//               obj: asset('human.obj'),
+//             }}
+//           />
+//         </View>
+//       </View>
 //     );
 //   }
 // };
+export default class Hello360 extends React.Component {
+  render () {
+    return (
+        <Entity
+          source={{
+            obj: asset('chair.obj'),
+          }}
+        />
+    )
+  }
+}
 
 
 const styles = StyleSheet.create({
